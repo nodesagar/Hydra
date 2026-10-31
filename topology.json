@@ -1,0 +1,38 @@
+{
+  "jurisdictions": [
+    {
+      "name": "EU",
+      "sites": [
+        {"name": "eu-fra", "city": "Frankfurt", "api": "127.0.0.1:7101", "mesh": "127.0.0.1:7201"},
+        {"name": "eu-par", "city": "Paris", "api": "127.0.0.1:7102", "mesh": "127.0.0.1:7202"},
+        {"name": "eu-ams", "city": "Amsterdam", "api": "127.0.0.1:7103", "mesh": "127.0.0.1:7203"}
+      ]
+    },
+    {
+      "name": "IN",
+      "sites": [
+        {"name": "in-mum", "city": "Mumbai", "api": "127.0.0.1:7104", "mesh": "127.0.0.1:7204"},
+        {"name": "in-hyd", "city": "Hyderabad", "api": "127.0.0.1:7105", "mesh": "127.0.0.1:7205"},
+        {"name": "in-del", "city": "Delhi", "api": "127.0.0.1:7106", "mesh": "127.0.0.1:7206"}
+      ]
+    },
+    {
+      "name": "US",
+      "sites": [
+        {"name": "us-east", "city": "Virginia", "api": "127.0.0.1:7107", "mesh": "127.0.0.1:7207"},
+        {"name": "us-cen", "city": "Iowa", "api": "127.0.0.1:7108", "mesh": "127.0.0.1:7208"},
+        {"name": "us-west", "city": "Oregon", "api": "127.0.0.1:7109", "mesh": "127.0.0.1:7209"}
+      ]
+    }
+  ],
+  "rtt_ms": {
+    "eu-fra/eu-par": 10, "eu-fra/eu-ams": 8, "eu-par/eu-ams": 9,
+    "in-mum/in-hyd": 18, "in-mum/in-del": 26, "in-hyd/in-del": 24,
+    "us-east/us-cen": 25, "us-east/us-west": 65, "us-cen/us-west": 40,
+    "EU/IN": 120, "EU/US": 85, "IN/US": 210
+  },
+  "topics": [
+    {"name": "payments", "partitions": 4}
+  ],
+  "observer": "127.0.0.1:7100"
+}
